@@ -8,6 +8,9 @@
     "start": "lerna run --parallel start",
     "build": "lerna run --parallel build",
     "clean": "lerna run --parallel clean",
+    "analyze-cart": "lerna run analyze --scope=cart",
+    "analyze-host": "lerna run analyze --scope=host",
+    "analyze-remote": "lerna run analyze --scope=remote",
     "serve": "lerna run --parallel serve",
     "host": "lerna run start --scope=host"
   },
@@ -15,10 +18,12 @@
     "@craco/craco": "^7.1.0",
     "@craco/types": "^7.1.0",
     "@types/lodash": "^4.14.199",
+    "cross-env": "^7.0.3",
     "html-webpack-plugin": "^5.5.3",
     "lerna": "^7.3.0",
     "serve": "^14.2.1",
-    "webpack": "^5.88.2"
+    "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.9.1"
   },
   "dependencies": {
     "@module-federation/concat-runtime": "^0.0.1",
