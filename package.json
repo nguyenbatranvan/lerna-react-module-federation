@@ -1,0 +1,28 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "build": "lerna run --parallel build",
+    "clean": "lerna run --parallel clean",
+    "serve": "lerna run --parallel serve",
+    "host": "lerna run start --scope=host"
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "@craco/types": "^7.1.0",
+    "@types/lodash": "^4.14.199",
+    "html-webpack-plugin": "^5.5.3",
+    "lerna": "^7.3.0",
+    "serve": "^14.2.1",
+    "webpack": "^5.88.2"
+  },
+  "dependencies": {
+    "@module-federation/concat-runtime": "^0.0.1",
+    "lodash": "^4.17.21",
+    "zustand": "^4.4.1"
+  }
+}
