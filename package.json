@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "start": "lerna run --parallel start",
+    "dev": "lerna run --parallel dev",
     "build": "lerna run --parallel build",
     "clean": "lerna run --parallel clean",
     "analyze-cart": "lerna run analyze --scope=cart",
@@ -18,6 +19,7 @@
     "@craco/craco": "^7.1.0",
     "@craco/types": "^7.1.0",
     "@types/lodash": "^4.14.199",
+    "@types/webpack-bundle-analyzer": "^4.6.1",
     "cross-env": "^7.0.3",
     "html-webpack-plugin": "^5.5.3",
     "lerna": "^7.3.0",

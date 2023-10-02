@@ -1,7 +1,6 @@
 import {CracoConfig} from "@craco/types";
-import {merge} from "lodash";
-
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+import { merge } from "lodash";
+import {BundleAnalyzerPlugin} from "webpack-bundle-analyzer";
 export const ShareCracoConfig = (config: CracoConfig): CracoConfig => {
     let webpackPlugins: any[] = []
     if (config.webpack && config.webpack.plugins) {
@@ -22,7 +21,7 @@ export const ShareCracoConfig = (config: CracoConfig): CracoConfig => {
         },
         webpack: {
             plugins: {
-                add: webpackPlugins
+                add: [...webpackPlugins]
             },
             configure: (config) => {
                 return {
